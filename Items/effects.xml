@@ -1,0 +1,38 @@
+<List>
+<Effect DisplayName="Insect Swarm" asset="Core" effect="foot_gravdirt"/>
+<Effect DisplayName="Insect Swarm" asset="Core" effect="insect_fly_swarm"/>
+<Effect DisplayName="Small Geyser" asset="Core" effect="exp_sht_steam"/>
+<Effect DisplayName="Small water splash" asset="scr_bou1" effect="scr_bou1_ped_water_splash"/>
+<Effect DisplayName="Checkpoint barrel break" asset="scr_net_race_checkpoints" effect="scr_net_race_barrel_break"/>
+<Effect DisplayName="Checkpoint slipstream" asset="scr_net_race_checkpoints" effect="scr_net_race_slipstream"/>
+<Effect DisplayName="Checkpoint Race" asset="scr_net_race_checkpoints" effect="scr_net_race_checkpoint"/>
+<Effect DisplayName="Destroy burst" asset="scr_net_target_races" effect="scr_net_target_destroy_burst"/>
+<Effect DisplayName="Fire ring" asset="scr_net_target_races" effect="scr_net_target_fire_ring_burst_mp"/>
+<Effect DisplayName="Player signal" asset="scr_net_player_signal" effect="scr_net_player_signal"/>
+<Effect DisplayName="Pickup smoke" asset="scr_net_fire_smoke" effect="scr_mp_collect_pickup_smoke"/>
+<Effect DisplayName="Firesmoke field" asset="scr_net_fire_smoke" effect="scr_brt2_firesmoke_field"/>
+<Effect DisplayName="embers" asset="scr_net_fire_smoke" effect="env_embers"/>
+<Effect DisplayName="Generic firesmoke field" asset="scr_net_fire_smoke" effect="ent_amb_generic_fire_field_smoke"/>
+<Effect DisplayName="Dynamite trail" asset="scr_net_dynamite" effect="proj_dynamite_trail"/>
+<Effect DisplayName="Dead Eye Head" asset="scr_deadeye" effect="scr_de_slippery_haze_head"/>
+<Effect DisplayName="Dead Eye Torso" asset="scr_deadeye" effect="scr_de_slippery_haze_torso"/>
+<Effect DisplayName="Dead Eye Limb" asset="scr_deadeye" effect="scr_de_slippery_haze_limb"/>
+<Effect DisplayName="Dead Eye Wisps" asset="scr_deadeye" effect="scr_de_recuperate_wisps"/>
+<Effect DisplayName="Dead Eye Smoke Torso" asset="scr_deadeye" effect="scr_de_steady_smoke_torso"/>
+<Effect DisplayName="Distant smoke" asset="scr_distance_smoke" effect="scr_campfire_distance_smoke_script"/>
+<Effect DisplayName="Smoke puff" asset="scr_fme_spawn_effects" effect="scr_net_fetch_smoke_puff"/>
+<Effect DisplayName="Teamborder" asset="scr_net_adversary_team_border" effect="scr_net_team_border"/>
+<Effect DisplayName="Env smoke" asset="scr_net_fire_smoke" effect="env_smoke"/>
+<Effect DisplayName="Cloak haze head" asset="scr_adv_ova_hunter" effect="scr_hunter_cloak_haze_head"/>
+<Effect DisplayName="Cloak haze torso" asset="scr_adv_ova_hunter" effect="scr_hunter_cloak_haze_torso"/>
+<Effect DisplayName="Cloak haze limb" asset="scr_adv_ova_hunter" effect="scr_hunter_cloak_haze_limb"/>
+<Effect DisplayName="Exp ground Dynamite" asset="Core" effect="exp_grd_dynamite"/>
+<Effect DisplayName="Exp crates Dynamite" asset="Core" effect="exp_dynamite_crates"/>
+<Effect DisplayName="Volatile Dynamite?" asset="Core" effect="exp_grd_dynamite_volatile"/>
+<Effect DisplayName="Moneybag coins" asset="scr_net_gunslinger" effect="scr_sht_moneybag_coins"/>
+<Effect DisplayName="Fire" asset="scr_net_fire_smoke" effect="ent_amb_generic_fire_field" loopable="true"/>
+</List>
+
+
+
+	

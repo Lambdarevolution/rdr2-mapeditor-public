@@ -1,0 +1,518 @@
+<Pickups> 
+   <Pickup>
+      <category>Weapons</category>
+      <name>Cattleman Revolver</name>
+        <PickupHash value="4224840272"/>
+        <ModelHash value="3497974323"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Cattleman Revolver - John</name>
+        <PickupHash value="4133361995"/>
+        <ModelHash value="3497974323"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Cattleman Revolver - Flaco</name>
+        <PickupHash value="1160884805"/>
+        <ModelHash value="1302582395"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Cattleman Revolver - Granger</name>
+        <PickupHash value="2430514325"/>
+        <ModelHash value="1663631237"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Double Action Revolver</name>
+        <PickupHash value="118589836"/>
+        <ModelHash value="2022748391"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Double Action Revolver - Exotic</name>
+        <PickupHash value="3198491192"/>
+        <ModelHash value="1703447255"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Double Action Revolver - Micah</name>
+        <PickupHash value="279300629"/>
+        <ModelHash value="438989852"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Double Action Revolver - Gambler</name>
+        <PickupHash value="3307669116"/>
+        <ModelHash value="1053179219"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Schofield Revolver</name>
+        <PickupHash value="1070119363"/>
+        <ModelHash value="3134824334"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Schofield Revolver - Miller</name>
+        <PickupHash value="760617877"/>
+        <ModelHash value="1141518777"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Schofield Revolver - Calloway</name>
+        <PickupHash value="681867381"/>
+        <ModelHash value="1454298882"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>LeMat Revolver</name>
+        <PickupHash value="1463707338"/>
+        <ModelHash value="1406468904"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Navy Revolver - NOT WORKING</name>
+        <PickupHash value="1965670269"/>
+        <ModelHash value="1496962064"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Masuer Pistol</name>
+        <PickupHash value="3045593999"/>
+        <ModelHash value="3404820150"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Masuer Pistol - Midnight</name>
+        <PickupHash value="538532644"/>
+        <ModelHash value="1491733169"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Semiauto Pistol</name>
+        <PickupHash value="1712010287"/>
+        <ModelHash value="255926778"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Volcanic Pistol</name>
+        <PickupHash value="493518845"/>
+        <ModelHash value="4270974041"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>M1899 Pistol</name>
+        <PickupHash value="1351710113"/>
+        <ModelHash value="17165543"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Repeater Carbine</name>
+        <PickupHash value="2168626664"/>
+        <ModelHash value="2351873292"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Repeater Henry</name>
+        <PickupHash value="2008054987"/>
+        <ModelHash value="1621373394"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Repeater Evans</name>
+        <PickupHash value="2478063922"/>
+        <ModelHash value="1993356636"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Repeater Winchester</name>
+        <PickupHash value="3318588934"/>
+        <ModelHash value="3338500555"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Varmint Rifle</name>
+        <PickupHash value="1709589141"/>
+        <ModelHash value="1032949268"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Bolt-Action Rifle</name>
+        <PickupHash value="522446563"/>
+        <ModelHash value="338263195"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Springfield Rifle</name>
+        <PickupHash value="907844324"/>
+        <ModelHash value="2081550909"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Rollingblock Rifle</name>
+        <PickupHash value="2321875570"/>
+        <ModelHash value="1315412017"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Rollingblock Rifle - Exotic</name>
+        <PickupHash value="331751277"/>
+        <ModelHash value="1315412017"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Carcano Rifle</name>
+        <PickupHash value="1875878693"/>
+        <ModelHash value="886037240"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Sawed-off Shotgun</name>
+        <PickupHash value="1198399823"/>
+        <ModelHash value="1212974634"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Double-Barrel Shotgun</name>
+        <PickupHash value="3153806410"/>
+        <ModelHash value="1864950433"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Double-Barrel Shotgun - Exotic</name>
+        <PickupHash value="929211691"/>
+        <ModelHash value="1864950433"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Pump-Action Shotgun</name>
+        <PickupHash value="1961725845"/>
+        <ModelHash value="3976643392"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Semi-Auto Shotgun</name>
+        <PickupHash value="1091187097"/>
+        <ModelHash value="3623027357"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Repeating Shotgun</name>
+        <PickupHash value="1639058103"/>
+        <ModelHash value="3271056655"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Bow</name>
+        <PickupHash value="3482294004"/>
+        <ModelHash value="3859078568"/>
+     </Pickup>
+   <Pickup>
+      <category>Weapons</category>
+      <name>Bow</name>
+        <PickupHash value="3482294004"/>
+        <ModelHash value="3859078568"/>
+     </Pickup>
+   <Pickup>
+      <category>Melee Weapons</category>
+      <name>Knife - Arthur</name>
+        <PickupHash value="3429450153"/>
+        <ModelHash value="4132741585"/>
+     </Pickup>
+   <Pickup>
+      <category>Melee Weapons</category>
+      <name>Knife - John</name>
+        <PickupHash value="1559494862"/>
+        <ModelHash value="4071266941"/>
+     </Pickup>
+   <Pickup>
+      <category>Melee Weapons</category>
+      <name>Knife - Jawbone</name>
+        <PickupHash value="1824774815"/>
+        <ModelHash value="3924068589"/>
+     </Pickup>
+   <Pickup>
+      <category>Melee Weapons</category>
+      <name>Knife - Miner</name>
+        <PickupHash value="1036234969"/>
+        <ModelHash value="1890949089"/>
+     </Pickup>
+   <Pickup>
+      <category>Melee Weapons</category>
+      <name>Knife - Civil War</name>
+        <PickupHash value="2298419876"/>
+        <ModelHash value="3545029902"/>
+     </Pickup>
+   <Pickup>
+      <category>Melee Weapons</category>
+      <name>Knife - Bear</name>
+        <PickupHash value="2406793291"/>
+        <ModelHash value="2806809870"/>
+     </Pickup>
+   <Pickup>
+      <category>Melee Weapons</category>
+      <name>Knife - Vampire</name>
+        <PickupHash value="3861851746"/>
+        <ModelHash value="362406315"/>
+     </Pickup>
+   <Pickup>
+      <category>Melee Weapons</category>
+      <name>Sword</name>
+        <PickupHash value="461723829"/>
+        <ModelHash value="3872446778"/>
+     </Pickup>
+   <Pickup>
+      <category>Melee Weapons</category>
+      <name>Sword - Broken</name>
+        <PickupHash value="461723829"/>
+        <ModelHash value="3964798246"/>
+     </Pickup>
+   <Pickup>
+      <category>Melee Weapons</category>
+      <name>Machete</name>
+        <PickupHash value="3532402635"/>
+        <ModelHash value="4257922597"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Throwing Knives</name>
+        <PickupHash value="3500664075"/>
+        <ModelHash value="1597043588"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Cleaver</name>
+        <PickupHash value="438815942"/>
+        <ModelHash value="1907799099"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Hatchet</name>
+        <PickupHash value="2389640029"/>
+        <ModelHash value="3285125789"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Hatchet - Ancient</name>
+        <PickupHash value="2418276255"/>
+        <ModelHash value="3108664724"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Hatchet - Viking</name>
+        <PickupHash value="2791907135"/>
+        <ModelHash value="2332039424"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Hatchet - Hewing</name>
+        <PickupHash value="185404527"/>
+        <ModelHash value="2629287023"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Hatchet - Double Bit</name>
+        <PickupHash value="4158058872"/>
+        <ModelHash value="1588871209"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Hatchet - Double Bit - Rusted</name>
+        <PickupHash value="2620822818"/>
+        <ModelHash value="1588871209"/>
+     </Pickup>
+    <Pickup>
+      <category>Throwables</category>
+      <name>Hatchet - Hunter</name>
+        <PickupHash value="3144257184"/>
+        <ModelHash value="1898243338"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Hatchet - Hunter - Rusted</name>
+        <PickupHash value="1702503778"/>
+        <ModelHash value="1898243338"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Tomahawk</name>
+        <PickupHash value="3397143806"/>
+        <ModelHash value="3358573347"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Dynamite</name>
+        <PickupHash value="1659765534"/>
+        <ModelHash value="3605642172"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Molotov</name>
+        <PickupHash value="2687718315"/>
+        <ModelHash value="2391568738"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Molotov - Volatile</name>
+        <PickupHash value="3169313105"/>
+        <ModelHash value="4281260911"/>
+     </Pickup>
+   <Pickup>
+      <category>Throwables</category>
+      <name>Lasso</name>
+        <PickupHash value="945354992"/>
+        <ModelHash value="3188750327"/>
+     </Pickup>
+   <Pickup>
+      <category>Ammo Types</category>
+      <name>Arrow - Regular</name>
+        <PickupHash value="2256309713"/>
+        <ModelHash value="3639198567"/>
+     </Pickup>
+   <Pickup>
+      <category>Ammo Types</category>
+      <name>Arrow - Dynamite</name>
+        <PickupHash value="4269369578"/>
+        <ModelHash value="2963081868"/>
+     </Pickup>
+   <Pickup>
+      <category>Ammo Types</category>
+      <name>Arrow - Fire</name>
+        <PickupHash value="2992705794"/>
+        <ModelHash value="2535604818"/>
+     </Pickup>
+   <Pickup>
+      <category>Ammo Types</category>
+      <name>Arrow - Small Game</name>
+        <PickupHash value="1884943282"/>
+        <ModelHash value="3328922390"/>
+     </Pickup>
+   <Pickup>
+      <category>Ammo Types</category>
+      <name>Arrow - Improved</name>
+        <PickupHash value="3211263446"/>
+        <ModelHash value="1146914213"/>
+     </Pickup>
+   <Pickup>
+      <category>Ammo Types</category>
+      <name>Arrow - Poison</name>
+        <PickupHash value="2431867823"/>
+        <ModelHash value="1146914213"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Gold Bar - Type 1</name>
+        <PickupHash value="684949289"/>
+        <ModelHash value="1209122190"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Gold Bar - Type 2</name>
+        <PickupHash value="684949289"/>
+        <ModelHash value="1119956893"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Gold Bar - Type 3</name>
+        <PickupHash value="684949289"/>
+        <ModelHash value="1604166241"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Gold Bar - Type 4</name>
+        <PickupHash value="684949289"/>
+        <ModelHash value="432839080"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Coin Cup - Type 1</name>
+        <PickupHash value="684949289"/>
+        <ModelHash value="2683760039"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Coin Cup - Type 2</name>
+        <PickupHash value="684949289"/>
+        <ModelHash value="1663466431"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Jewelry Bag - Type 1</name>
+        <PickupHash value="684949289"/>
+        <ModelHash value="737252554"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Jewelry Bag - Type 2</name>
+        <PickupHash value="684949289"/>
+        <ModelHash value="891692655"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Quartz Chunk</name>
+        <PickupHash value="1578426216"/>
+        <ModelHash value="1530102892"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Bonds</name>
+        <PickupHash value="4263048111"/>
+        <ModelHash value="242358089"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Money Bag - Small</name>
+        <PickupHash value="4263048111"/>
+        <ModelHash value="178323656"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Money Bag - Medium</name>
+        <PickupHash value="4263048111"/>
+        <ModelHash value="291474213"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Money Bag - Large - Type 1</name>
+        <PickupHash value="4263048111"/>
+        <ModelHash value="2394981217"/>
+     </Pickup>
+   <Pickup>
+      <category>Valuables</category>
+      <name>Money Bag - Large - Type 2</name>
+        <PickupHash value="4263048111"/>
+        <ModelHash value="1547041634"/>
+     </Pickup>
+   <Pickup>
+      <category>Items</category>
+      <name>Moonshine Jug</name>
+        <PickupHash value="16319985"/>
+        <ModelHash value="4292607645"/>
+     </Pickup>
+   <Pickup>
+      <category>Items</category>
+      <name>Torch</name>
+        <PickupHash value="1008526372"/>
+        <ModelHash value="3600160159"/>
+     </Pickup>
+   <Pickup>
+      <category>Items</category>
+      <name>Lantern</name>
+        <PickupHash value="244896013"/>
+        <ModelHash value="891739652"/>
+     </Pickup>
+   <Pickup>
+      <category>Special</category>
+      <name>Healthpack</name>
+        <PickupHash value="2406513688"/>
+        <ModelHash value="4267665015"/>
+     </Pickup>
+   <Pickup>
+      <category>Special</category>
+      <name>Fishing Rod</name>
+        <PickupHash value="2926847858"/>
+        <ModelHash value="2799016260"/>
+     </Pickup>
+</Pickups>
