@@ -1,0 +1,19 @@
+// Camera functions 
+// NOTE: theese are a jsut few more exist and will be added shortly
+
+void SetCameraActive(int camera, bool active);
+bool IsCameraActive(int camera);
+bool DoesCameraExist(int camera);
+void SetCameraFov(int camera, float fov);
+void DeleteCamera(int camera);
+void DestroyCamera(int camera);
+void DeleteAllCameras();
+bool IsCameraShaking(int camera);
+float GetCameraFov(int camera);
+int CreateScriptCamera();
+float GetSplineCamPhase(int camera) 
+void SetSplineCameraDuration(int camera, int ms) 
+int CreateSplineCamera();
+void DetachCamera(int camera);
+CreateCamera(Vector3 position, Vector3 Rotation, bool activate);
+void AttachCameraToEntity(int camera, int entity, Vector3 Offset, bool relative);
