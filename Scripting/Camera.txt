@@ -1,10 +1,13 @@
 // Camera functions 
 // Scope: Global.
-// NOTE: theese are a just few, more exist and will be added shortly.
+// Please Add comments.
 
-void SetCameraActive(int camera, bool active);
+// Returns true if the camera is active.
 bool IsCameraActive(int camera);
+
+// Returns true if the exists.
 bool DoesCameraExist(int camera);
+
 void SetCameraFov(int camera, float fov);
 void DeleteCamera(int camera);
 void DestroyCamera(int camera);
@@ -23,3 +26,37 @@ void AttachCameraToEntity(int camera, int entity, Vector3 Offset, bool relative)
 void DisableFirstPersonCameraThisFrame();
 void FadeInCamera(int fadetime);
 void FadeOutCamera(int fadetime);
+bool IsScreenFadedOut();
+Vector3 GetGameplayCameraPosition();
+Vector3 GetGameplayCameraRotation();
+int GetRenderingCamera();
+void SetCameraPosition(int camera, Vector3 position);
+void SetCameraRotation(int camera, Vector3 rotation);
+void StopCameraShaking(int camera);
+void ShakeCamera(int camera, std::string effect, float amplitude);
+void AnimPostFXStopAll();
+void RenderScriptCameras();
+void SetCameraMotionBlurStrenght(int camera, float strength);
+void PointCameraAtEntity(int cam, int ent);
+void AttachCameraToPedBone(int camera, int ped, int boneindex, float x, float y, float z, bool heading);
+void SetCameraActive(int camera, bool active);
+bool IsHintActive();
+void StopCameraShake();
+void SetCamHint(int entity, int fadetime);
+void StopCamHint();
+void SetCinematicModeActive(bool state);
+void SetWideScreenBorders(bool state, int unk);
+bool IsGameplayCameraShaking();
+void ShakeGameplayCamera( std::string effect, float amplitude);
+void SetGameplayCameraShakeAmplitude(float amplitude);
+bool isAnimpostFxRunning(std::string effect); 
+void StopAnimPostFx(std::string effect); 
+void PlayAnimPostFX(std::string name);
+void PlayAnimPostFXTimed(std::string name, int ms);
+void StopCameraPointing(int camera);
+void FreezeGameplayCameraThisFrame();
+void StopGameplayCameraShaking();
+void PointCameraAtPosition(int camera, Vector3 position);
+bool IsCameraFadingIn();
+void DetachCamera(int camera);
+void SetGameplayCameraHeading(float heading);
