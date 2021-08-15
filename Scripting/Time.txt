@@ -35,11 +35,11 @@
 
   // AdvanceTimeTo
   void AdvanceTimeTo(int hour, int minute, int second);
-  Not sure really.
+  Not tested.
 
   // AddTimeToClock
   void AddTimeToClock(int hours, int minutes, int second);
-  Not Sure..
+ Not tested.
 
   // SetMillisecondsPerGameMinute
   void SetMillisecondsPerGameMinute(int milliseconds);
