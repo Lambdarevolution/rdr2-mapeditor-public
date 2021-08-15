@@ -39,7 +39,7 @@
 
   // AddTimeToClock
   void AddTimeToClock(int hours, int minutes, int second);
- Not tested.
+  Not tested.
 
   // SetMillisecondsPerGameMinute
   void SetMillisecondsPerGameMinute(int milliseconds);
