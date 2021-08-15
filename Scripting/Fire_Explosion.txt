@@ -1,0 +1,9 @@
+void Explosion(float x, float y, float z, int type);
+void StopFireInRange(Vector3 position, float range);
+int StartFireAtPosition(Vector3 position);
+void StartEntityFire(int entity);
+int GetNumberOfFiresInRange(Vector3 position, float range);
+Vector3 GetClosesFirePosition(Vector3 position);
+bool IsEntityConsumedByFire(int entity);
+bool IsExplosionInRange(Vector3 position, float range);
+void RemoveScriptFire(int fire_id);
