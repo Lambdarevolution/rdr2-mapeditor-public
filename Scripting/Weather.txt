@@ -1,0 +1,16 @@
+// Weather functions
+// Scope: Global.
+// Add comments...
+
+float GetWindSpeed();
+void SetWindSpeed(float speed);
+void SetWeather(string weathertype);
+void SetRainLevel(float value);
+float GetRainLevel();
+void SetSnowLevel(float value);
+float GetSnowLevel();
+void SetWindDirection(float heading);
+void SetGuarmaHorizon(bool state);
+void LightningFlash(Vector3 position);
+float GetTemperature(float x, float y, float z);
+	
