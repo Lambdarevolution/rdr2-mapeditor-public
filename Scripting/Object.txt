@@ -1,9 +1,15 @@
 // Object functions
 // Scope: Object only
 
+// Returns the distance to the main player
 float Object.GetDistanceToPlayer();
+
+// Instantly sets the position of the object
 void Object.SetPosition(Vector3 position);
+
+// Returns current position of the object.
 Vector3 Object.GetPosition();
+
 void Object.SetRotation(Vector3 rotation);
 Vector3 Object.GetRotation();
 void Object.DetachEntity(int entity);
