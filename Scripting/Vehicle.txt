@@ -1,0 +1,14 @@
+// Vehicle functions
+// Scope: Vehicle only
+void Vehicle.SetBlip(hash blip);
+void Vehicle.SetVehicleFixed();
+void Vehicle.SetVehicleWheelsCanBreak(bool state);
+void Vehicle.BreakOffWheel(int 0-3);
+void Vehicle.SetSnowLevel(float level)
+float Vehicle.GetSnowLevel();
+void Vehicle.setMudLevel(float level);
+float Vehicle.GetMudLevel();
+void Vehicle.SetWetLevel(float level);
+float Vehicle.GetWetLevel();
+void Vehicle.SetDirtLevel(float level);
+float Vehicle.GetDirtLevel();
