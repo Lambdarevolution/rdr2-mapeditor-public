@@ -1,0 +1,36 @@
+// Object functions
+// Scope: Object only
+
+float Object.GetDistanceToPlayer();
+void Object.SetPosition(Vector3 position);
+Vector3 Object.GetPosition();
+void Object.SetRotation(Vector3 rotation);
+Vector3 Object.GetRotation();
+void Object.DetachEntity(int entity);
+void Object.AttachEntity(int entity, int boneindex, float positionx, float positiony, float positionz, float rotationx, float rotationy, float rotationz, bool collision, bool fixed_rotation);
+void Object.ApplyForce(int forceFlags, float x, float y, float z, float offX, float offY, float offZ, int boneIndex, BOOL isDirectionRel, BOOL ignoreUpVec, BOOL isForceRel, BOOL p12, BOOL p13);
+void Object.ApplyForceCenter(int forcetype, float forcex, float forcey, float forcez, bool directionrelative, bool relativeforce);
+Vector3 Object.GetForwardVector();
+Vector3 Object.GetUpVector();
+Vector3 Object.GetRightVector();
+int Object.GetId();
+bool Object.IsObjectInWater();
+bool Object.IsObjectInAir();
+bool Object.IsTouchingPlayer();
+bool Object.IsAnyPedNear(float radius);
+
+// Note requires that object has a light! 0-255
+void Object.SetLightColorOnEntity(int r, int g, int b);
+void Object.SetLightIntensityOnEntity(float intensity);
+void Object.SetLightTypeOnEntity(int type);
+void Object.SetLightIntensityOnSpecifiedEntity(int entity, float intensity);
+
+// NOTE: Theese values are attached to entity, meaning unless the object is removed the variables will be there regardless if editor is running or not!
+// use field_exist to avoid issues!
+void Object.set_bool(string name, bool value);
+bool Object.get_bool(string name);
+void Object.set_float(string name, float value);
+float Object.get_float(string name);
+void Object.set_int(string name, int value);
+int Object.get_int(string name);
+bool Object.field_exists(string name)
