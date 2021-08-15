@@ -12,3 +12,13 @@ void Vehicle.SetWetLevel(float level);
 float Vehicle.GetWetLevel();
 void Vehicle.SetDirtLevel(float level);
 float Vehicle.GetDirtLevel();
+
+// NOTE: Theese values are attached to entity, meaning unless the vehicle is removed the variables will be there regardless if editor is running or not!
+// use field_exist to avoid issues!
+void Vehicle.set_bool(string name, bool value);
+bool Vehicle.get_bool(string name);
+void Vehicle.set_float(string name, float value);
+float Vehicle.get_float(string name);
+void Vehicle.set_int(string name, int value);
+int Vehicle.get_int(string name);
+bool Vehicle.field_exists(string name);
