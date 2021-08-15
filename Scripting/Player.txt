@@ -1,0 +1,35 @@
+// Player functions
+// Scope: Global.
+
+// ill fix this later.
+
+AddCash
+DecreaseCash
+isPlayerDead
+PlayPlayerAnimation
+StopPlayerAnimation
+GetPlayerCurrentAnimationTime
+TeleportPlayer
+GetPlayerPosition
+SwitchPlayerModel
+GetPlayerPed
+SetPlayerCanBeHassledByGangs
+SetPlayerWantedLevel
+ClearPlayerWantedLevel
+GetPlayerMoneyBalance
+HasPlayerDamagedAtLeastOnePed
+ClearPlayerHasDamagedAtLeastOnePed
+CanPlayerStartMission
+GetPlayerHealth
+GetEntityPlayerIsFreeAimingAt
+GetPlayerCurrentStealthNoise
+PlayerCanUseCover
+PlayerNoiseMultiplier
+IsPlayerFreeAiming
+IsPlayerAimingAt
+IsPlayerOnFire
+SetPlayerControlActive
+DisablePlayerFiring
+GetPlayerName
+GetLastVehicle
+PlayerGetLastImpactPoint
