@@ -1,0 +1,12 @@
+// Spawn stuff
+// Scope: Global.
+// All spawn functions returns the entity id.
+
+// Task is not used!, weaponmodel for unarmed use "WEAPON_UNARMED"
+int SpawnPed(string pedmodel, Vector3 position, string Task, string weaponmodel);
+
+int SpawnObject(string model, bool collision, bool dynamic, Vector3 position, Vector3 rotation);
+
+int SpawnVehicle(string vehiclemodel, Vector3 position, float heading);
+
+int SpawnComposite(string name, Vector3 position);
