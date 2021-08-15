@@ -9,8 +9,12 @@ bool IsCameraActive(int camera);
 bool DoesCameraExist(int camera);
 
 void SetCameraFov(int camera, float fov);
+// Deletes the camera, will go back gameplaycamera
 void DeleteCamera(int camera);
+
+// Same as DeleteCamera.
 void DestroyCamera(int camera);
+
 void DeleteAllCameras();
 bool IsCameraShaking(int camera);
 float GetCameraFov(int camera);
