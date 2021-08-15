@@ -1,5 +1,6 @@
 // Camera functions 
-// NOTE: theese are a jsut few more exist and will be added shortly
+// Scope: Global.
+// NOTE: theese are a just few, more exist and will be added shortly.
 
 void SetCameraActive(int camera, bool active);
 bool IsCameraActive(int camera);
@@ -15,5 +16,10 @@ float GetSplineCamPhase(int camera)
 void SetSplineCameraDuration(int camera, int ms) 
 int CreateSplineCamera();
 void DetachCamera(int camera);
-CreateCamera(Vector3 position, Vector3 Rotation, bool activate);
+int CreateCamera(Vector3 position, Vector3 Rotation, bool activate);
+void AddCameraSplineNode(int camera, float x, float y, float z, float xRot, float yRot, float zRot, int length, int p8, int p9);
+void SetSplineCameraSmoothingStyle(int cam, int style);
 void AttachCameraToEntity(int camera, int entity, Vector3 Offset, bool relative);
+void DisableFirstPersonCameraThisFrame();
+void FadeInCamera(int fadetime);
+void FadeOutCamera(int fadetime);
