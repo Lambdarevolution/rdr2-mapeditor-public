@@ -4,5 +4,5 @@ Feel free to help out expanding this documentation with examples or comments on 
 
 ## Basics functions explained for none coders
 
-void : Function returns nothing
+void : Function returns nothing <br>
 bool : Returns true or false
