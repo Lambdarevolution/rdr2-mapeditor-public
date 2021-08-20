@@ -3,20 +3,20 @@
 
 // ill fix this later.
 
-AddCash
-DecreaseCash
-isPlayerDead
-PlayPlayerAnimation
-StopPlayerAnimation
-GetPlayerCurrentAnimationTime
-TeleportPlayer
-GetPlayerPosition
-SwitchPlayerModel
-GetPlayerPed
-SetPlayerCanBeHassledByGangs
-SetPlayerWantedLevel
-ClearPlayerWantedLevel
-GetPlayerMoneyBalance
+void AddCash(int amount);
+void DecreaseCash(int amount);
+bool isPlayerDead();
+void PlayPlayerAnimation
+void StopPlayerAnimation
+void GetPlayerCurrentAnimationTime
+void TeleportPlayer(float x, float y, float z);
+Vector3 GetPlayerPosition();
+void SwitchPlayerModel(std::string model);
+int GetPlayerPed(); // Returns ped ID not model!
+void SetPlayerCanBeHassledByGangs(bool state);
+void SetPlayerWantedLevel
+void ClearPlayerWantedLevel()
+int GetPlayerMoneyBalance();
 HasPlayerDamagedAtLeastOnePed
 ClearPlayerHasDamagedAtLeastOnePed
 CanPlayerStartMission
@@ -25,11 +25,11 @@ GetEntityPlayerIsFreeAimingAt
 GetPlayerCurrentStealthNoise
 PlayerCanUseCover
 PlayerNoiseMultiplier
-IsPlayerFreeAiming
-IsPlayerAimingAt
-IsPlayerOnFire
-SetPlayerControlActive
-DisablePlayerFiring
-GetPlayerName
-GetLastVehicle
-PlayerGetLastImpactPoint
+bool IsPlayerFreeAiming(int entity);
+bool IsPlayerAimingAt(int entity);
+bool IsPlayerOnFire();
+void SetPlayerControlActive(bool state);
+void DisablePlayerFiring(bool state);
+std::string GetPlayerName();
+int GetLastVehicle();
+Vector3 PlayerGetLastImpactPoint();
