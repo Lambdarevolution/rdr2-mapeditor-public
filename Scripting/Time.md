@@ -6,7 +6,7 @@
 
   ###### SetTime
     Instantly sets the ingame time.
-  ```void SetTime(int hour, int minute, int second);````
+  ```void SetTime(int hour, int minute, int second);```
 
   // GetTimeHour
   int GetTimeHour();
