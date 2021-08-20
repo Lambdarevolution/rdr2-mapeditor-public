@@ -34,13 +34,18 @@
 >
 > // Instantly sets the ingamedate.
 
-  // PauseClock
-  void PauseClock(bool state);
-  Pauses the ingame clock, NOTE: it does not pause the game!
 
-  // SetTimeScale
-  void SetTimeScale(float scale);
-  Sets the ingame timescale.
+  ###### PauseClock
+>  void PauseClock(bool state);
+>
+> // Pauses the ingame clock, NOTE: it does not pause the game!
+ 
+  ###### SetTimeScale
+>  void SetTimeScale(float scale);
+>
+> // Sets the ingame timescale.
+ 
+ 
 
   // AdvanceTimeTo
   void AdvanceTimeTo(int hour, int minute, int second);
