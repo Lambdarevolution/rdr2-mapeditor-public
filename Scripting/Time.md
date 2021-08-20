@@ -1,9 +1,12 @@
-  // Time related functions.
-  // Scope: Global.
+# Time related functions.
 
-  // SetTime
-  void SetTime(int hour, int minute, int second);
-  Instantly sets the time.
+ Functions related to ingame time.
+ 
+## Scope: Global
+
+  ###### SetTime
+    Instantly sets the ingame time.
+  ```void SetTime(int hour, int minute, int second);````
 
   // GetTimeHour
   int GetTimeHour();
