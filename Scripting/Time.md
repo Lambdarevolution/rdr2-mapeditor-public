@@ -1,6 +1,6 @@
 # Time related functions.
 
- Functions related to ingame time.
+ Functions related to ingame time. They have a global scope and can be called by any script in the map.
  
 ## Scope: Global
 
