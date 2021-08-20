@@ -19,18 +19,20 @@
 >
 > // Returns the current minute in game time.
 
-  
-  // GetTimeSecond
-  int GetTimeSecond();
-  returns the current second in game time.
+  ###### GetTimeSecond
+> int GetTimeSecond();
+>
+> // Returns the current second in game time.
 
-  // GetTimeYear
-  int GetTimeYear();
-  returns the current year in game time.
+  ###### GetTimeYear
+> int GetTimeYear();
+>
+> // Returns the current year in game time.
 
-  // SetDate
-  void SetDate(int year, int month, int day);
-  instantly sets the date.
+  ###### SetDate
+>  void SetDate(int year, int month, int day);
+>
+> // Instantly sets the ingamedate.
 
   // PauseClock
   void PauseClock(bool state);
