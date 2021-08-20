@@ -32,7 +32,7 @@
 > // Checks if the prompt has been completed, returns true if so.
 
 
-  ##### DrawSuDoesPromptExistbtitle
+  ##### DoesPromptExistbtitle
 > bool DoesPromptExist(string tag);
 >
 > // Checks if the prompt exist returns true if so.
