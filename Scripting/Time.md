@@ -12,12 +12,14 @@
   ###### GetTimeHour
 > int GetTimeHour();
 >
-> // Eeturns the current hour in game time.
+> // Returns the current hour in game time.
 
-  // GetTimeMinute
-  int GetTimeMinute();
-  returns the current minute in game time.
+  ###### GetTimeMinute
+> int GetTimeMinute();
+>
+> // Returns the current minute in game time.
 
+  
   // GetTimeSecond
   int GetTimeSecond();
   returns the current second in game time.
