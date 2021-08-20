@@ -9,9 +9,10 @@
 >
 > // Instantly sets the ingame time.
 
-  // GetTimeHour
-  int GetTimeHour();
-  returns the current hour in game time.
+  ###### GetTimeHour
+> int GetTimeHour();
+>
+> // Eeturns the current hour in game time.
 
   // GetTimeMinute
   int GetTimeMinute();
