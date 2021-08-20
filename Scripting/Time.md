@@ -5,8 +5,8 @@
 ## Scope: Global
 
   ###### SetTime
-    void SetTime(int hour, int minute, int second);
-   // Instantly sets the ingame time.
+> void SetTime(int hour, int minute, int second);
+> // Instantly sets the ingame time.
 
   // GetTimeHour
   int GetTimeHour();
