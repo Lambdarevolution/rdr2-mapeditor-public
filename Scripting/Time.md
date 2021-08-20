@@ -46,15 +46,22 @@
 > // Sets the ingame timescale.
  
  
+  ###### AdvanceTimeTo
+>  void AdvanceTimeTo(int hour, int minute, int second);
+>
+> // Not tested.
+  
+  
+  ###### AddTimeToClock
+>  void AddTimeToClock(int hours, int minutes, int second);
+>
+> // Not tested.
+  
+  ###### SetMillisecondsPerGameMinute
+>  void SetMillisecondsPerGameMinute(int milliseconds);
+>
+> Not tested but name says it all..
 
-  // AdvanceTimeTo
-  void AdvanceTimeTo(int hour, int minute, int second);
-  Not tested.
-
-  // AddTimeToClock
-  void AddTimeToClock(int hours, int minutes, int second);
-  Not tested.
-
-  // SetMillisecondsPerGameMinute
-  void SetMillisecondsPerGameMinute(int milliseconds);
-  Not tested but name says it all..
+ 
+  
+  
