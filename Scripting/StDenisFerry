@@ -1,0 +1,288 @@
+// -- Created by: Lambdarevolution contributions by Spacetimer
+// -- For testing just attach this script to a ped.
+// -- Version: 0.0.0.3
+
+// -------------------------------------------------------------
+// To clean up the prompts for the ped we set 130 to true
+// -------------------------------------------------------------
+
+Ped.SetPedFlag(130, true);
+
+// -------------------------------------------------------------
+// Setup - Should normally only run once. We check if a field is
+// named menu_open exist on the ped, if it dosent we add all the
+// fields we need.
+// -------------------------------------------------------------
+
+if(!Ped.field_exists("menu_open")) 
+{
+  Ped.set_bool("menu_open", false);      // To see if the menu is open
+  Ped.set_int("menu_item", 0);           // Holds the location we are at in the menu
+  Ped.set_int("boat", 0);			     // Entity id for our boat animation.
+  Ped.set_int("captain", 0);		     // Entity id for our boat captain.
+  Ped.set_bool("isTeleporting", false);  // To keep track when we teleport and not.
+  Ped.SetPedName("Ferry Clerk");		 // We want to name our ped Ferry Clerk.
+  
+  // This was removed and needs to be added again.
+  // AddBlip("BLIP_STYLE_PICKUP_VEHICLE",Ped.GetId()); 
+}
+
+//------------------------------------------------------------------
+// If we are within distance, targetting the ped and menu isnt open
+//------------------------------------------------------------------
+
+if(Ped.GetDistanceToPlayer() < 2.0f && Ped.GetId() == GetPlayerTargetEntity() && !Ped.get_bool("menu_open")) 
+{
+  
+  //-----------------------------------------------------
+  // Does the prompt buy_ticket exist?
+  //-----------------------------------------------------
+  
+  if(DoesPromptExist("buy_ticket"))  
+  {
+	
+	//-----------------------------------------------------
+	// The prompt exists now we check if it's completed:
+	//-----------------------------------------------------
+	
+	if(IsPromptCompleted("buy_ticket")) 
+	{
+      //-----------------------------------------------------
+	  // The prompt is completed, hint camera and open menu.
+	  //-----------------------------------------------------
+	  
+      SetCamHint(Ped.GetId(), 1500); 
+      Ped.set_bool("menu_open", true);  
+    } 
+  } 
+  else 
+  {
+      //-----------------------------------------------------
+	  // The prompt dosent exists we need to create it.
+	  //-----------------------------------------------------
+      
+	  CreatePromptInput("INPUT_FRONTEND_ACCEPT", "Buy Ferry Ticket", "buy_ticket");
+	  // Ped.PLayAmbientSpeech("GREET_MALE", "0078_U_M_M_BLWTRAINSTATIONWORKER_01");
+      SetPromptGroup("buy_ticket", GetPromptGroupIdFromEntity(GetPlayerTargetEntity()));
+    }
+  } 
+  else 
+  {
+  if(DoesPromptExist("buy_ticket")) {
+    DeletePrompt("buy_ticket");
+	if(!Ped.get_bool("menu_open")) {
+	// Ped.PLayAmbientSpeech("FAREWELL_NO_SALE", "0078_U_M_M_BLWTRAINSTATIONWORKER_01");
+	}
+  } 
+  if(Ped.GetDistanceToPlayer() > 2.0f && Ped.get_bool("menu_open")) {
+    Ped.set_bool("menu_open", false);
+  }
+}
+
+//
+// Draws the menu if it's open
+//
+if(Ped.get_bool("menu_open")) {
+
+//
+// Hide the normal hud
+//
+HideHudThisFrame();
+
+//
+// Background and headers
+//
+DrawTexture("pausemenu_textures", "menu_ink_large1", 0.163f, 0.47f, 0.3f, 0.9f, 0.0f, 0, 0, 0, 225);
+DrawTexture("generic_textures", "menu_header_1a", 0.163f, 0.1f, 0.225f, 0.1f, 0.0f, 255, 255, 255, 255);
+DrawSubtitle("Ferry", 0.163f, 0.072f, 0.8f, 14); 
+DrawSubtitle("Stations", 0.163f, 0.165f, 0.39f, 2);
+
+// ---------------------- Guarma ---------------------------------//
+DrawSubtitle("Guarma", 0.078f, 0.237f, 0.38f, 0);
+// Dollar amount
+DrawSubtitle("$525", 0.23f, 0.232f, 0.5f, 14);
+// Cent 
+DrawSubtitle("40", 0.255f, 0.232f, 0.4f, 9); 
+// Divider line under cents
+DrawTexture("menu_textures", "crafting_highlight_b", 0.256f, 0.256f, 0.012f, 0.01f, 0.0f, 255, 255, 255, 200);
+//Background
+DrawRectangle(0.162, 0.251, 0.22, 0.045, 35, 35, 35, 200);
+//---------------------------------------------------------------//
+
+//------------------ Blackwater --------------------------------//
+DrawSubtitle("Blackwater", 0.085f, 0.282f, 0.38f, 0);
+// Dollar amount
+DrawSubtitle("$50", 0.234f, 0.277f, 0.5f, 14);
+// Cent 
+DrawSubtitle("50", 0.255f, 0.277f, 0.4f, 9); 
+// Divider line under cents
+DrawTexture("menu_textures", "crafting_highlight_b", 0.256f, 0.3f, 0.012f, 0.01f, 0.0f, 255, 255, 255, 200);
+//Background
+DrawRectangle(0.162, 0.298, 0.22, 0.045,35,35, 35, 200);
+//---------------------------------------------------------------//
+
+//------------------ Van Horn --------------------------------//
+DrawSubtitle("Van Horn", 0.081f, 0.327f, 0.38f, 0);
+// Dollar amount
+DrawSubtitle("$30", 0.234f, 0.322f, 0.5f, 14);
+// Cent 
+DrawSubtitle("50", 0.255f, 0.322f, 0.4f, 9); 
+// Divider line under cents
+DrawTexture("menu_textures", "crafting_highlight_b", 0.256f, 0.345f, 0.012f, 0.01f, 0.0f, 255, 255, 255, 200);
+//Background
+DrawRectangle(0.162, 0.345, 0.22, 0.045,35,35, 35, 200);
+//-------------------------------------------------------------//
+
+//------------------ Annesburg --------------------------------//
+DrawSubtitle("Annesburg", 0.084f, 0.372f, 0.38f, 0);
+// Dollar amount
+DrawSubtitle("$35", 0.234f, 0.367f, 0.5f, 14);
+// Cent 
+DrawSubtitle("50", 0.255f, 0.367f, 0.4f, 9); 
+// Divider line under cents
+DrawTexture("menu_textures", "crafting_highlight_b", 0.256f, 0.39f, 0.012f, 0.01f, 0.0f, 255, 255, 255, 200);
+//Background
+DrawRectangle(0.162, 0.392, 0.22, 0.045,35,35, 35, 200);
+//-------------------------------------------------------------//
+
+// -- Selection box (red) --//
+DrawTexture("menu_textures", "crafting_highlight_tl", 0.049f, 0.22807 + (Ped.get_int("menu_item") * (0.045)), 0.01f, 0.01f, 0.0f, 255, 15, 15, 255);
+DrawTexture("menu_textures", "crafting_highlight_tr", 0.275f, 0.22807 + (Ped.get_int("menu_item") * (0.045)), 0.01f, 0.01f, 0.0f, 255, 15, 15, 255);
+
+DrawTexture("menu_textures", "crafting_highlight_b", 0.163f, 0.2218 + (Ped.get_int("menu_item") * (0.045)), 0.219f, 0.015f, 0.0f, 255, 15, 15, 255);
+DrawTexture("menu_textures", "crafting_highlight_b", 0.163f, 0.27405 + (Ped.get_int("menu_item") * (0.045)), 0.219f, 0.015f, 0.0f, 255, 15, 15, 255);
+
+DrawTexture("menu_textures", "crafting_highlight_l", 0.049f, 0.25106 + (Ped.get_int("menu_item") * (0.045)), 0.01f, 0.038f, 0.0f, 255, 15, 15, 255);
+DrawTexture("menu_textures", "crafting_highlight_l", 0.274f, 0.25106 + (Ped.get_int("menu_item") * (0.045)), 0.01f, 0.038f, 0.0f, 255, 15, 15, 255);
+
+DrawTexture("menu_textures", "crafting_highlight_bl", 0.049f, 0.27405 + (Ped.get_int("menu_item") * (0.045)), 0.01f, 0.01f, 0.0f, 255, 15, 15, 255);
+DrawTexture("menu_textures", "crafting_highlight_br", 0.275f, 0.27405 + (Ped.get_int("menu_item") * (0.045)), 0.01f, 0.01f, 0.0f, 255, 15, 15, 255);
+
+//DrawTexture("menu_textures", "crafting_highlight_b", 0.165f, 0.29f, 0.23f, 0.01f, 0.0f, 255, 255, 255, 200);
+DrawTexture("menu_textures", "crafting_highlight_b", 0.165f, 0.85f, 0.23f, 0.01f, 0.0f, 255, 255, 255, 200);
+
+// -- Fix text below also missing the divider line --//
+DrawSubtitle("Choose a",  0.105f, 0.865f, 0.33f, 0); 
+DrawSubtitle("destination",  0.155f, 0.865f, 0.33f, 0); 
+DrawSubtitle("to travel to",  0.211f, 0.865f, 0.33f, 0); 
+// Ped might attack player when standing close this is a bad fix we should try to check animations/voice from train station
+Ped.TaskPause(50);  // Bad this should be something else and an animation loop added
+
+// We press enter while the menu is active proccess it here:
+if(IsControlJustPressed("INPUT_FRONTEND_ACCEPT")) {
+// Check cash first (Missing GetCurrentMoney())
+// This should be checked for each item in the list instead so we can grey them out like in the original one. This would be done when drawing the menu
+
+// Check the input here (menu item)
+var menuitem = Ped.get_int("menu_item");
+
+// 0 = Guarma
+if(menuitem == 0) {
+  // Control Cash flow here
+  if((GetPlayerMoneyBalance() - 450) > 0) {
+  
+  	Ped.PLayAmbientSpeech("FAREWELL_SALE", "0078_U_M_M_BLWTRAINSTATIONWORKER_01");
+	var i = 0;
+	DecreaseCash(450);
+	Ped.set_bool("menu_open", false);
+			
+	// This fades out the camera
+	PlayAnimPostFXTimed("CamTransition01", 5500);
+	Ped.set_int("camera", CreateSplineCamera());
+	
+	// Setup the cutscene
+	
+	// SHIP_NBDGUAMA
+	// TODO: Wrongboat for now, captain jumps out. Not sure if it's ped task or player that scares them.
+	var boat = SpawnVehicle("horseBoat", Vector3(809.1f, -2116.5f, 39.11f), 90);
+	var captain = SpawnPed("S_M_M_STGSAILOR_01", Vector3(809.1f, -2116.5f, 39.11f), "NONE", "WEAPON_UNARMED");
+	SetBoatAnchor(boat, false);
+	WrapPedToVehicle(captain, boat, -1); 
+	WrapPedToVehicle(GetPlayerPed(), boat, 0); 
+	
+	TaskBoatGoTo(captain, boat, Vector3(850.10f, -2115.5f, 43.11f), 50.0f, 1);
+	PedBlockTemporaryEvents(captain, true);
+	SetVehicleForwardSpeed(boat, 20.0f);
+	Ped.set_int("boat", boat);
+	Ped.set_int("captain", captain);
+			
+			// Camera Setup
+			var camera = Ped.get_int("camera");
+			SetCameraFov(camera, 50);
+			AddCameraSplineNode(camera,828.129211,-2123.570068,41.675030,0.305632 ,0.000000,86.217155, 10000,11,1);
+			AddCameraSplineNode(camera,808.078125,-2139.698730,47.177986,-6.272494 ,0.000000,69.730278, 10000,2,1);
+
+			SetSplineCameraSmoothingStyle(camera, 2);
+			SetCameraActive(camera, true);
+			RenderScriptCameras(true);
+			
+			Ped.set_bool("isTeleporting", true);
+			}
+		}
+		// 1 = Van horn trading post
+	else if(menuitem == 1) {
+			DecreaseCash(300);
+			Ped.set_bool("menu_open", false);
+				PlayAnimPostFX("CamTransitionBlinkSlow");
+				
+			TeleportPlayer(3028.979, 552.621, 44.715);
+	
+	} else if (menuitem == 2) {
+		DecreaseCash(300);
+			Ped.set_bool("menu_open", false);
+			TeleportPlayer(-684.042, -1244.306, 43.109);
+	}
+}
+}
+
+
+// -blip_ambient_riverboat
+
+// Menu input parsing
+if(Ped.get_bool("menu_open")) {
+var item = Ped.get_int("menu_item");
+
+if(IsControlJustReleased("INPUT_FRONTEND_NAV_UP")) {
+  if(item > 0) {
+  // 
+      PlayHudSound("NAV_LEFT", "HUD_SHOP_SOUNDSET");
+      Ped.set_int("menu_item", item - 1);
+	} else if(item == 0) {
+      Ped.set_int("menu_item", 3);
+  }	
+}
+	
+if(IsControlJustReleased("INPUT_FRONTEND_NAV_DOWN")) {
+  if(item < 3) {
+      PlayHudSound("NAV_RIGHT", "HUD_SHOP_SOUNDSET");
+      Ped.set_int("menu_item", item + 1);
+    } else if(item == 3) {
+      Ped.set_int("menu_item", 0);
+    }
+  }
+}
+
+if(Ped.get_bool("isTeleporting")) {
+  CinematicBars(true);
+  HideHUDThisFrame();
+  SetPlayerControlActive(false);
+  //TaskBoatGoTo(Ped.get_int("captain"), Ped.get_int("captain"), Vector3(500.10f, -2115.5f, 43.11f), 20.0f, -1);
+  
+  if(GetSplineCamPhase(Ped.get_int("camera")) > 0.5f) {
+  VehicleHorn(Ped.get_int("boat"), 1500);
+  }
+
+  if(GetSplineCamPhase(Ped.get_int("camera")) > 0.99f) {
+    CinematicBars(false);
+    SetPlayerControlActive(true);
+	PlayAnimPostFXTimed("CamTransition01", 7000);
+	Ped.set_bool("isTeleporting", false);
+	DestroyAllCameras();
+	DeleteVehicle(Ped.get_int("boat"));
+	DeletePed(Ped.get_int("captain"));
+    var selected = Ped.get_int("menu_item");
+    if(selected == 0) {
+      TeleportPlayer(1272.885, -6855.370, 43.318);
+    }
+  }
+}
