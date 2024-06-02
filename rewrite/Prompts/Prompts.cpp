@@ -210,28 +210,6 @@ float Prompts::GetPromptProgress(char* t_tag) {
   return 0.0f;
 }  
 
-void Prompts::SetUrgentPulsing(char* t_tag, bool t_state) {
-  for (int i = 0; i < Promptlist.size(); i++) {
-    if (Promptlist[i]->tag == t_tag) {
-      UI::_0xC5F428EE08FA7F2C(Promptlist[i]->id, t_state);
-    }
-  }
-}
-
-bool Prompts::IsUrgentPulsingEnabled(char* t_tag) {
-  for (int i = 0; i < Promptlist.size(); i++) {
-    if (Promptlist[i]->tag == t_tag) {
-     return  UI::_0x1FBA0DABECDDB52B(Promptlist[i]->id);
-    }
-  }
-  Log::GetInstance()->AddToLog(
-    Log::logLevel::Warning,
-    "IsUrgentPulsingEnabled() failed to find an prompt with the tag:%s",
-    std::string(t_tag)
-  );
-  return false;
-}
-
 void Prompts::SetHorizontalOrientation() {
   this->m_horizontalid = UI::_0xD9459157EB22C895();
 }
@@ -253,6 +231,21 @@ bool Prompts::IsPromptBeingPressed(char* t_tag) {
   );
   return false;
 }
+
+bool Prompts::IsPromptJustReleased(char* t_tag) {
+  for (int i = 0; i < Promptlist.size(); i++) {
+    if (Promptlist[i]->tag == t_tag) {
+      return UI::_0x635CC82FA297A827(Promptlist[i]->id);
+    }
+  }
+  Log::GetInstance()->AddToLog(
+    Log::logLevel::Warning,
+    "IsPromptJustReleased() failed to find an prompt with the tag:%s",
+    std::string(t_tag)
+  );
+  return false;
+}
+
 
 bool Prompts::IsPromptEnabled(char* t_tag) {
   for (int i = 0; i < Promptlist.size(); i++) {
