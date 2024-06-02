@@ -16,6 +16,7 @@
 struct sPrompt {
   int id = -1;
   std::string tag;
+  uint mode;
 };
 
 class Prompts {
@@ -51,7 +52,7 @@ class Prompts {
   bool IsPromptBeingPressed(char* t_tag);
   bool IsPromptJustReleased(char* t_tag);
   bool IsPromptEnabled(char* t_tag);
-  bool IsPromptCompleted(char* t_tag, EMode mode);
+  bool IsPromptCompleted(char* t_tag);
   void SetHorizontalOrientation();
   void ResetHorizontalOrientation();
   void DeleteAllEditorPrompts();
