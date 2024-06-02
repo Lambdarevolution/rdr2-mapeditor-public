@@ -66,6 +66,7 @@ void Prompts::CreatePrompt(char* t_input, char* t_text, EMode t_mode, bool t_ena
   sPrompt* _prompt = new sPrompt();
   _prompt->id = promptid;
   _prompt->tag = t_tag;
+  _prompt->mode = t_mode;
   Promptlist.push_back(_prompt);  
 }
 
@@ -261,10 +262,10 @@ bool Prompts::IsPromptEnabled(char* t_tag) {
   return false;
 }
 
-bool Prompts::IsPromptCompleted(char* t_tag, EMode mode) {
+bool Prompts::IsPromptCompleted(char* t_tag) {
   for (auto& prompt : Prompts::getInstance()->Promptlist) {
     if (prompt->tag == t_tag) {
-      switch (mode) {
+      switch (prompt->mode) {
       case Prompts::indefinitely_mode:
         return UI::_0xC7D70EAEF92EFF48(prompt->id);
         break;
