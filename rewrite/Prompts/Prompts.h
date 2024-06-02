@@ -1,30 +1,26 @@
 /*
 | License: Unlicense
-| Created by: Lambdarevolution(at)gmail.com / 2020-03-28
+| Created by: Lambdarevolution(at)gmail.com / 2020-03-28 / rewrite 2024-06-01
 | Purpose: Create and manages rdr2 prompts easily using a singleton class.
-| Modified for public release 2024-05-31
-| Uses the sdk native header. Alot of the natives in the sdk header are unnamed so
-| you will see alot native hashes. 
-| Note that i havent had time to test/add all modes and natives!
 */
 #ifndef RDR2_MAPEDITOR_PROMPTS_H_
 #define RDR2_MAPEDITOR_PROMPTS_H_
 
-#include <vector>
 #include <string>
+#include <vector>
 
 #include "..\..\inc\natives.h"
 #include "..\..\inc\types.h"
 
-// This is a pretty ugly fix of a holder struct but meh it works.
+// This is just a holder.
 struct sPrompt {
-  int id;
+  int id = -1;
   std::string tag;
 };
 
 class Prompts {
  private:
-  int m_horizontalid;
+  int m_horizontalid = -1;
   static Prompts* m_instance;
   std::vector<sPrompt*> Promptlist;
 
@@ -50,11 +46,10 @@ class Prompts {
   void SetPromptText(char* t_tag, const char* t_txt);
   void SetPriority(char* t_tag, int t_priority);
   float GetPromptProgress(char* t_tag);  
-  void SetUrgentPulsing(char* t_tag, bool t_state);  
-  bool IsUrgentPulsingEnabled(char* t_tag);  
   bool DoPromptExist(char* t_tag);
   bool IsPromptValid(char* t_tag);
   bool IsPromptBeingPressed(char* t_tag);
+  bool IsPromptJustReleased(char* t_tag);
   bool IsPromptEnabled(char* t_tag);
   bool IsPromptCompleted(char* t_tag, EMode mode);
   void SetHorizontalOrientation();
