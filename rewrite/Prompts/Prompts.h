@@ -13,7 +13,7 @@
 #include "..\..\inc\types.h"
 
 // This is just a holder.
-struct sPrompt {
+struct PromptInstance {
   int id = -1;
   std::string tag;
   uint mode;
@@ -23,7 +23,7 @@ class Prompts {
  private:
   int m_horizontalid = -1;
   static Prompts* m_instance;
-  std::vector<sPrompt*> Promptlist;
+  std::vector<PromptInstance*> Promptlist;
 
  public:
   enum EMode {
