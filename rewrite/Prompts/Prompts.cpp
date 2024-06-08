@@ -63,7 +63,7 @@ void Prompts::CreatePrompt(char* t_input, char* t_text, EMode t_mode, bool t_ena
     return;
   }
   // Store this prompt.
-  sPrompt* _prompt = new sPrompt();
+  PromptInstance* _prompt = new PromptInstance();
   _prompt->id = promptid;
   _prompt->tag = t_tag;
   _prompt->mode = t_mode;
@@ -212,11 +212,11 @@ float Prompts::GetPromptProgress(char* t_tag) {
 }  
 
 void Prompts::SetHorizontalOrientation() {
-  this->m_horizontalid = UI::_0xD9459157EB22C895();
+  m_horizontalid = UI::_0xD9459157EB22C895();
 }
 
 void Prompts::ResetHorizontalOrientation() {
-  UI::_0x6095358C4142932A(this->m_horizontalid);
+  UI::_0x6095358C4142932A(m_horizontalid);
 }
 
 bool Prompts::IsPromptBeingPressed(char* t_tag) {
@@ -302,9 +302,9 @@ bool Prompts::IsPromptCompleted(char* t_tag) {
 }
 
 void Prompts::DeleteAllEditorPrompts() {
-  for (int i = 0; i < this->Promptlist.size(); i++) {
-    UI::_0x00EDE88D4D13CF59(this->Promptlist[i]->id);
-    delete this->Promptlist[i];
+  for (int i = 0; i < Promptlist.size(); i++) {
+    UI::_0x00EDE88D4D13CF59(Promptlist[i]->id);
+    delete Promptlist[i];
   }
-  this->Promptlist.clear();
+  Promptlist.clear();
 }
