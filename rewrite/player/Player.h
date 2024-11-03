@@ -15,11 +15,11 @@ struct PlayerInfo {
 
   void ResetPlayer() const;
 
-  Vector3 m_player_position;
-  Vector3 m_mount_position;
-  Entity m_mount_ped;
-  bool m_on_mount;
-  Hash m_weapon;
+  Vector3 mPlayerPosition;
+  Vector3 mMountPosition;
+  Entity mMountPed;
+  bool mOnMount;
+  Hash mWeapon;
 };
 
 #endif  // PLAYER_H
