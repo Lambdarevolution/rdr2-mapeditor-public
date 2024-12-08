@@ -1,1 +1,1 @@
-![alt.](/rewrite/screenshots/EditorLimits.png)
+![alt.](/rewrite/screenshots/editorlimits.png)
