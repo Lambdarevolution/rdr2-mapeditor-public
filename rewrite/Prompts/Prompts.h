@@ -3,8 +3,8 @@
 | Created by: Lambdarevolution(at)gmail.com / 2020-03-28 / rewrite 2024-06-01
 | Purpose: Create and manages rdr2 prompts easily using a singleton class.
 */
-#ifndef RDR2_MAPEDITOR_PROMPTS_H_
-#define RDR2_MAPEDITOR_PROMPTS_H_
+#ifndef RDR2_MAPEDITOR_PROMPTS_H
+#define RDR2_MAPEDITOR_PROMPTS_H
 
 #include <string>
 #include <vector>
@@ -12,18 +12,18 @@
 #include "..\..\inc\natives.h"
 #include "..\..\inc\types.h"
 
-// This is just a holder.
+// This is a hold struct for prompts, we do this since we cant get tags on the prompt at the moment we need our own solution.
 struct PromptInstance {
-  int id = -1;
-  std::string tag;
-  uint mode;
+  int mId = -1;
+  char* mTag;
+  uint mMode;
 };
 
 class Prompts {
  private:
-  int m_horizontalid = -1;
-  static Prompts* m_instance;
-  std::vector<PromptInstance*> Promptlist;
+  int mHorizontalId = -1;
+  static Prompts* mInstance;
+  std::vector<PromptInstance*> mPromptList;
 
  public:
   enum EMode {
@@ -37,24 +37,24 @@ class Prompts {
   };
 
   static Prompts* getInstance();
-  void CreatePrompt(char* t_input, char* t_text, EMode t_mode, bool t_enabled, bool t_visible, char* t_tag, int t_timer, int t_mashes);
-  void DeletePrompt(char* t_tag);
-  void HidePrompt(char* t_tag);
-  void ShowPrompt(char* t_tag);
-  void DisablePrompt(char* t_tag);
-  void EnablePrompt(char* t_tag);
-  void SetPromptAttribute(char* t_tag, int t_attribute, bool t_enable); 
-  void SetPromptText(char* t_tag, const char* t_txt);
-  void SetPriority(char* t_tag, int t_priority);
-  float GetPromptProgress(char* t_tag);  
-  bool DoPromptExist(char* t_tag);
-  bool IsPromptValid(char* t_tag);
-  bool IsPromptBeingPressed(char* t_tag);
-  bool IsPromptJustReleased(char* t_tag);
-  bool IsPromptEnabled(char* t_tag);
-  bool IsPromptCompleted(char* t_tag);
+  void CreatePrompt(char* p_input, char* text, EMode mode, bool enabled, bool visible, char* tag, int timer, int mashes);
+  void DeletePrompt(char* tag);
+  void HidePrompt(char* tag);
+  void ShowPrompt(char* tag);
+  void DisablePrompt(char* tag);
+  void EnablePrompt(char* tag);
+  void SetPromptAttribute(char* tag, int attribute, bool enable); 
+  void SetPromptText(char* tag, const char* txt);
+  void SetPriority(char* tag, int priority);
+  float GetPromptProgress(char* tag);  
+  bool DoPromptExist(char* tag);
+  bool IsPromptValid(char* tag);
+  bool IsPromptBeingPressed(char* tag);
+  bool IsPromptJustReleased(char* tag);
+  bool IsPromptEnabled(char* tag);
+  bool IsPromptCompleted(char* tag);
   void SetHorizontalOrientation();
-  void ResetHorizontalOrientation();
-  void DeleteAllEditorPrompts();
+  void ResetHorizontalOrientation() const;
+  void DeleteAllEditorPrompts();;
 };
 #endif  // RDR2_MAPEDITOR_PROMPTS_H_
