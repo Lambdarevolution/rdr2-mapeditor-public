@@ -1,6 +1,7 @@
 /*
 | License: Unlicense
-| Created by: Lambdarevolution(at)gmail.com 
+| Created by: Lambdarevolution(at)gmail.com
+| Rewritten 2025. 
 */
 #ifndef RDR2_MAPEDITOR_ENTITES_LIGHT_H
 #define RDR2_MAPEDITOR_ENTITES_LIGHT_H
@@ -9,66 +10,68 @@
 
 class Light : public EditorEntity {
 private:
-  int mRed = 255;
-  int mGreen = 255;
-  int mBlue = 255;
-  float mRange = 10.0f;
-  float mIntensity = 100.0f;
+  int m_Red{ 255 };
+  int m_Green{ 255 };
+  int m_Blue{ 255 };
+  float m_Range{ 10.0f };
+  float m_Intensity{ 100.0f };
 
 public:
   Light() {
-    Vector3 lInitialPosition;
-    lInitialPosition.x, lInitialPosition.y, lInitialPosition.z = 0.f;
-    this->SetId(std::rand() % 25000); 
-    this->mRed = 255;
-    this->mGreen = 255;
-    this->mBlue = 255;
-    this->mRange = 10.f;
-    this->mIntensity = 100.f;
-    this->SetPosition(lInitialPosition);
-    this->SetCollision(false);
-    this->SetGravity(false);
-    this->SetDynamic(false);
-    this->SetEntityType(EditorEntity::Type::light);
-    this->SetRotation(lInitialPosition); 
+  m_Red = 255;
+  m_Green = 255;
+  m_Blue = 255;
+  m_Range = 10.0f;
+  m_Intensity = 100.0f;
+  SetId(std::rand() % 25000);
+  SetPosition(Vector3(0.0f, 0.0f, 0.0f));
+  SetCollision(false);
+  SetGravity(false);
+  SetIsDynamic(false);
+  SetEntityType(EditorEntity::Type::light);
+  SetRotation(Vector3(0.0f, 0.0f, 0.0f));
   }
 
-  void SetColor(const int red, const int green, const int blue) { 
-    this->mRed = red, this->mGreen = green, this->mBlue = blue; 
+  void Update() override {
+    GRAPHICS::DRAW_LIGHT_WITH_RANGE(GetPosition().x, GetPosition().y, GetPosition().z, m_Red, m_Green, m_Blue, m_Range, m_Intensity);
   }
 
-  void SetIntensity(const float intensity) {
-    this->mIntensity = intensity; 
+  void SetColor(const int t_red, const int t_green, const int t_blue) {
+    m_Red = t_red, m_Green = t_green, m_Blue = t_blue;
   }
 
-  void SetRange(const float value) { 
-    this->mRange = value; 
+  void SetIntensity(const float t_intensity) {
+    m_Intensity = t_intensity;
+  }
+
+  void SetRange(const float t_range) {
+    m_Range = t_range;
   }
 
   float GetRange() const {
-    return this->mRange; 
+    return m_Range;
   }
 
   float GetIntensity() const {
-    return this->mIntensity; 
+    return m_Intensity;
   }
 
-  int GetRedColor() const { 
-    return this->mRed; 
+  int GetRedColor() const {
+    return m_Red;
   }
 
   int GetGreenColor() const {
-    return this->mGreen; 
+    return m_Green;
   }
 
-  int GetBlueColor() const { 
-    return this->mBlue;
+  int GetBlueColor() const {
+    return m_Blue;
   }
 
-  void Clone(Light& other) {
-    this->SetColor(other.GetRedColor(), other.GetGreenColor(), other.GetBlueColor());
-    this->SetIntensity(other.GetIntensity());
-    this->SetRange(other.GetRange());
+  void Clone(const Light& t_other_light) {
+    SetColor(t_other_light.GetRedColor(), t_other_light.GetGreenColor(), t_other_light.GetBlueColor());
+    SetIntensity(t_other_light.GetIntensity());
+    SetRange(t_other_light.GetRange());
   }
 };
 #endif  // RDR2_MAPEDITOR_ENTITES_LIGHT_H
